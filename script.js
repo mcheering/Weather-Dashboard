@@ -1,7 +1,7 @@
 $("document").ready(function () {
       var recentCities = JSON.parse(localStorage.getItem("cities")) || []
       function getWeather(cityName) {
-            var currentWthrURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=af1a956362d5886e7e0d1d06e4b5d0a0"
+            var currentWthrURL = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=af1a956362d5886e7e0d1d06e4b5d0a0"
             $.ajax({
                   url: currentWthrURL,
                   method: "GET"
@@ -20,7 +20,7 @@ $("document").ready(function () {
                   $("#currentHum").text("Humidity: " + response.main.humidity + "%")
                   $("#currentSpeed").text("Wind Speed: " + response.wind.speed + " mph")
 
-                  var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=af1a956362d5886e7e0d1d06e4b5d0a0"
+                  var uvURL = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=af1a956362d5886e7e0d1d06e4b5d0a0"
 
                   $.ajax({
                         url: uvURL,
@@ -38,7 +38,7 @@ $("document").ready(function () {
                   $("#future4day").text(future4)
                   $("#future5day").text(future5)
                   //weather symbols, temps, annd humidity for forecast cards
-                  var foreCastUrl = "http://api.openweathermap.org/data/2.5/onecall?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&units=imperial&cnt=5&appid=af1a956362d5886e7e0d1d06e4b5d0a0"
+                  var foreCastUrl = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&units=imperial&cnt=5&appid=af1a956362d5886e7e0d1d06e4b5d0a0"
                   $.ajax({
                         url: foreCastUrl,
                         method: "GET"
