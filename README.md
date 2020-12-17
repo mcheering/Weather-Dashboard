@@ -5,6 +5,7 @@
       </head>
       <body>
             <h5>Background</h5>
+            <h6>Access project <a href="https://mcheering.github.io/Weather-Dashboard/">here</a></h6>
             <p>This project uses html, css, javascript/jQuery, and the openweather API to allow users to search cities and the dashboard return current weather along with a 5 day forecast.  The most challenging part of this project was to figure out how not to display duplicate cities.  AN early bug was a search for the same city would yield multiple recent search cards for that city.  However, this was fixed by using local storage and comparing strings to remove duplicates. Overall this project was a challenge to build</p>
             <h5>Tutorial</h5>
             <p>The first time you land on the page, you will be greeted with blank cards like in the image below</p>
