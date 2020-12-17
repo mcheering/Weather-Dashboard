@@ -74,7 +74,7 @@ $("document").ready(function () {
 
       $("button").on("click", function () {
             const cityName = $("#locationInput").val()
-            if (cityName == "") {
+            if (cityName == "" || cityName == "null" || cityName == "Null") {
                   alert("Enter a valid city")
                   return
             } else {
